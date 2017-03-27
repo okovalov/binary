@@ -1,0 +1,107 @@
+﻿<xml xmlns="http://www.w3.org/1999/xhtml" collection="true">
+  <block type="procedures_defreturn" id="Hfg.=dQz#4Of#xazXz^=">
+    <mutation>
+      <arg name="__input_list"></arg>
+    </mutation>
+    <field name="NAME">getOddEvenStats</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="variables_set" id="|wA=5Q0c;Co3:F/VO;1u">
+        <field name="VAR">__f__list</field>
+        <value name="VALUE">
+          <block type="lists_getSublist" id="B[a}1`Y%)e0gY1}s%G:w">
+            <mutation at1="true" at2="true"></mutation>
+            <field name="WHERE1">FROM_END</field>
+            <field name="WHERE2">FROM_END</field>
+            <value name="LIST">
+              <block type="variables_get" id="-[_;HP|@uJ_Xds$j-~$m">
+                <field name="VAR">__input_list</field>
+              </block>
+            </value>
+            <value name="AT1">
+              <block type="math_number" id="4SkO~1+0)dS%-9@W8-=h">
+                <field name="NUM">5</field>
+              </block>
+            </value>
+            <value name="AT2">
+              <block type="math_number" id="g=k=s@iq9gnGeM;w-kay">
+                <field name="NUM">1</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="controls_forEach" id="GT6ra(O];TO86{I*]hoG">
+            <field name="VAR">i</field>
+            <value name="LIST">
+              <block type="variables_get" id="TTwdBLcksy+5z.U#ETX?">
+                <field name="VAR">__f__list</field>
+              </block>
+            </value>
+            <statement name="DO">
+              <block type="variables_set" id="EF$y?E+s?#,#|D#R?g:z">
+                <field name="VAR">__f__tick</field>
+                <value name="VALUE">
+                  <block type="math_arithmetic" id="FeYB!s^o8T+=P5!f0bds">
+                    <field name="OP">MULTIPLY</field>
+                    <value name="A">
+                      <shadow type="math_number" id="{-IgS)NIV+WlZ@x:|08m">
+                        <field name="NUM">1</field>
+                      </shadow>
+                      <block type="variables_get" id="ibZE,|,qjd)eE.Bp,a=r">
+                        <field name="VAR">i</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <shadow type="math_number" id="n05Rp@@71S2#~U$AESq6">
+                        <field name="NUM">1</field>
+                      </shadow>
+                      <block type="math_number" id="$.Q{CALgE!g;L!%`Zoet">
+                        <field name="NUM">100</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="notify" id=")[WT_P|xptT)#n||$K7d">
+                    <field name="NOTIFICATION_TYPE">info</field>
+                    <value name="MESSAGE">
+                      <block type="text_join" id="-R93Q[2(4(uAIh`Mwoc0">
+                        <mutation items="4"></mutation>
+                        <value name="ADD0">
+                          <block type="text" id="=}1W)#LoQ=qJBd@.|}{/">
+                            <field name="TEXT"> 0 - </field>
+                          </block>
+                        </value>
+                        <value name="ADD1">
+                          <block type="variables_get" id="t)u;avinOyp~T-3OtP^l">
+                            <field name="VAR">i</field>
+                          </block>
+                        </value>
+                        <value name="ADD2">
+                          <block type="text" id="9h3[L`j(~i2_63o;Iwl+">
+                            <field name="TEXT"> 100 - </field>
+                          </block>
+                        </value>
+                        <value name="ADD3">
+                          <block type="variables_get" id=",RSAGQ}$I_aqY;%7@r~g">
+                            <field name="VAR">__f__tick</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block type="math_number" id="jm}62gvg3)wqJ5f}+Y^7">
+        <field name="NUM">4</field>
+      </block>
+    </value>
+  </block>
+</xml>
